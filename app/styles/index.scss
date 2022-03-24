@@ -1,0 +1,235 @@
+@import './vars/index.scss';
+
+body {
+  background: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  // @media (min-width: 1920px) {
+  //   background-size: 252.2rem, cover;
+  // }
+}
+
+.balloon {
+  @media (max-width: 768px) {
+    right: auto;
+    top: 40vw;
+    left: 1rem;
+  }
+}
+
+.main {
+  margin-top: -3.5%;
+  &::after {
+    display: none;
+  }
+}
+
+.kv {
+  padding-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(../images/ocean_index-2.png), url(../images/bg.jpg);
+  background-size: 131.35%, cover;
+  background-position: top 13.5rem left 40%, center;
+  background-repeat: repeat, repeat;
+  @media (min-width: 1920px) {
+    background-size: 252.2rem, cover;
+  }
+  .wrap {
+    max-width: 1800px;
+    margin: auto;
+  }
+  .animate {
+    width: 100%;
+    height: 0;
+    padding-bottom: 54.55%;
+    position: relative;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-bottom: 150%;
+    }
+    .animate_link {
+      position: absolute;
+      // background-color: rgba(255, 0, 0, 0.5);
+      background-color: transparent;
+      z-index: 1;
+      height: 0;
+      &_smart {
+        // 新手村
+        // width: 8.66%;
+        // padding-bottom: 6.66%;
+        // top: 65.1%;
+        // left: 44.9%;
+
+        // 464 340
+        width: 25.777%;
+        padding-bottom: 18.888%;
+        top: 42.4%;
+        left: 38.9%;
+        @media (max-width: 768px) {
+          // 140 108
+          // width: 21.875%;
+          // padding-bottom: 16.875%;
+          // top: 45.8%;
+          // left: 38.7%;
+
+          width: 50.875%;
+          padding-bottom: 38.875%;
+          top: 31%;
+          left: 25.7%;
+        }
+      }
+      &_e-click {
+        // 冒險島
+        // width: 6.95%;
+        // padding-bottom: 5.56%;
+        // top: 38.4%;
+        // left: 27.8%;
+
+        // 440 385
+        width: 24.444%;
+        padding-bottom: 21.3885%;
+        top: 16%;
+        left: 12.8%;
+        @media (max-width: 768px) {
+          // 120 106
+          // width: 18.75%;
+          // padding-bottom: 16.5625%;
+          // top: 74.5%;
+          // left: 25.8%;
+
+          width: 45.75%;
+          padding-bottom: 38.5625%;
+          top: 59.5%;
+          left: 0;
+        }
+      }
+      &_fund {
+        // 礦山
+        // width: 7.66%;
+        // padding-bottom: 6.05%;
+        // top: 65%;
+        // left: 75.7%;
+
+        // 445 390
+        width: 24.722%;
+        padding-bottom: 21.666%;
+        top: 42%;
+        left: 67.2%;
+        @media (max-width: 768px) {
+          // 112 97
+          // width: 17.5%;
+          // padding-bottom: 15.156%;
+          // top: 70.9%;
+          // left: 72%;
+
+          width: 47.5%;
+          padding-bottom: 33.156%;
+          top: 58.9%;
+          left: 53%;
+        }
+      }
+      &_description {
+        // 170 171
+        width: 9.44%;
+        padding-bottom: 9.495%;
+        top: 21.5%;
+        left: 41.1%;
+        // &::after {
+        //   position: absolute;
+        //   content: '';
+        //   width: 5.4rem;
+        //   height: 6.8rem;
+        //   background-image: url(../images/lock_pc.png);
+        //   background-repeat: no-repeat;
+        //   background-position: center;
+        //   background-size: 100% 100%;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   opacity: 0;
+        //   transition: 0.3s;
+        // }
+        // &:hover::after {
+        //   opacity: 1;
+        // }
+        @media (max-width: 768px) {
+          // 105 132
+          width: 16.40625%;
+          padding-bottom: 20.625%;
+          top: 44.4%;
+          left: 1.2%;
+        }
+      }
+      &_video {
+        // 283 204
+        width: 15.722%;
+        padding-bottom: 11.333%;
+        top: 60.7%;
+        left: 16.35%;
+        // &::after {
+        //   position: absolute;
+        //   content: '';
+        //   width: 5.4rem;
+        //   height: 6.8rem;
+        //   background-image: url(../images/lock_pc.png);
+        //   background-repeat: no-repeat;
+        //   background-position: center;
+        //   background-size: 100% 100%;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   opacity: 0;
+        //   transition: 0.3s;
+        // }
+        // &:hover::after {
+        //   opacity: 1;
+        // }
+        @media (max-width: 768px) {
+          // 220 149
+          width: 34.375%;
+          padding-bottom: 23.28125%;
+          top: 86%;
+          left: 32%;
+        }
+      }
+    }
+    #animate_pc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 53%;
+      transform: translate(-50%, 0);
+      user-select: none;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    #animate_m {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        user-select: none;
+      }
+    }
+  }
+}
+
+#footer {
+  margin-top: -7%;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+}

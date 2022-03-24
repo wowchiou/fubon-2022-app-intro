@@ -1,0 +1,311 @@
+@import './vars/index.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+  background-color: #fff;
+  @media (max-width: 77.5em) {
+    padding: 0 2.5rem;
+  }
+  @media (max-width: 75em) {
+    padding: 0;
+  }
+  &::after {
+    @extend %underline;
+    display: block;
+    z-index: 0;
+    @media (max-width: 75em) {
+      display: none;
+    }
+  }
+}
+
+.header > .wrap {
+  margin: auto;
+  position: relative;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 1;
+  @media (max-width: 75em) {
+    max-width: none;
+    display: block;
+    height: 100%;
+  }
+}
+
+.header .top {
+  height: 7.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
+  @media (max-width: 75em) {
+    width: 100%;
+  }
+}
+
+.header .top::after {
+  @extend %underline;
+  display: none;
+  @media (max-width: 75em) {
+    display: block;
+  }
+}
+
+.header .logo {
+  @extend %bg-cover;
+  width: 16.1rem;
+  height: 6.1rem;
+  background-image: url(../images/logo-2.png);
+  position: relative;
+  top: 4px;
+  @media (max-width: 75em) {
+    // width: 6.4rem;
+    // height: 5.2rem;
+    top: auto;
+    background-image: url(../images/logo.png);
+  }
+}
+
+.header .menu_open {
+  width: 6.1rem;
+  height: 4.4rem;
+  @extend %bg-cover;
+  background-image: url(../images/menu-1.png);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translate(0, -50%) scale(0.75);
+  display: none;
+
+  @media (max-width: 75em) {
+    display: block;
+  }
+}
+
+.header.active {
+  .menu {
+    display: block;
+  }
+  .menu_open {
+    display: none;
+  }
+  @media (max-width: 75em) {
+    height: 100%;
+  }
+}
+
+.header .sub_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: map-get($color, 'secondary');
+  padding: 0 1rem;
+  display: none;
+  @media (max-width: 1060px) {
+    display: block;
+  }
+  li + li {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+  }
+  a {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    background: none;
+    border: none;
+    span {
+      letter-spacing: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.menu {
+  display: block;
+  height: auto;
+  background-color: transparent;
+  width: auto;
+  overflow: visible;
+  @media (max-width: 75em) {
+    display: none;
+    background-color: map-get($color, 'bodyBG');
+    height: calc(100% - 7.6rem);
+    overflow: auto;
+    width: 100%;
+  }
+}
+
+.menu .wrap {
+  text-align: center;
+  position: relative;
+  min-height: none;
+  height: 100%;
+  @media (max-width: 75em) {
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu_close {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/close-1.png);
+  @extend %bg-cover;
+  cursor: pointer;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  display: none;
+  @media (max-width: 75em) {
+    display: block;
+  }
+}
+
+.menu .content {
+  position: relative;
+  height: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+
+  @media (max-width: 75em) {
+    display: block;
+    background-color: map-get($color, 'contentBG');
+    padding: 6rem 2.5rem 2.5rem;
+    margin: 7rem auto;
+    height: auto;
+  }
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @media (max-width: 75em) {
+      display: block;
+      height: auto;
+    }
+    & > .btn {
+      width: auto;
+      border-radius: 0;
+      background: none;
+      height: 100%;
+      overflow: visible;
+      position: relative;
+
+      @media (max-width: 75em) {
+        overflow: hidden;
+        width: 27rem;
+        display: block;
+        background-color: map-get($color, 'primary');
+      }
+      & > a {
+        background: none;
+        font-size: 2rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        font-weight: 500;
+        color: #000;
+        border: none;
+        @media (max-width: 75em) {
+          background-color: map-get($color, 'secondary');
+          display: block;
+          font-size: 2.4rem;
+          color: #fff;
+          width: 100%;
+          height: 100%;
+          line-height: 1.5;
+        }
+        @media (max-width: 40em) {
+          span {
+            font-size: 2.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  .menu .content > ul > .btn:hover {
+    background-color: map-get($color, 'secondary');
+    a {
+      color: #fff;
+    }
+    .sub_menu {
+      display: block;
+    }
+  }
+}
+
+.menu .content .btn i {
+  margin-left: 0.5rem;
+  display: inline-block;
+
+  @media (max-width: 75em) {
+    display: none;
+  }
+}
+
+.menu .content li:not(:last-child) {
+  margin-top: 0;
+
+  @media (max-width: 75em) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.menu .content .fans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+
+  @media (max-width: 75em) {
+    padding: 0;
+  }
+}
+
+.menu .content .fans a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  // @extend %bg-cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  @media (max-width: 75em) {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+  &.fans_fb {
+    background-image: url(../images/icon-fb-1.png);
+  }
+  &.fans_wilkinson {
+    background-image: url(../images/icon-official-web-1.png);
+  }
+  & + a {
+    margin-left: 1rem;
+
+    @media (max-width: 75em) {
+      margin-left: 2.5rem;
+    }
+  }
+}

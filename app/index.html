@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="投資難不島 富邦行動新三寶︱富邦證券" />
+    <meta
+      name="description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+    <meta
+      name="keyword"
+      content="富邦,證券,投資難不島,股票,證券,投資,台股,ETF,美股,基金,影音,教學,下單,APP教學,理財,開戶,學習投資"
+    />
+
+    <title>投資難不島 富邦行動新三寶︱富邦證券</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+
+    <!-- fb 分享設定 -->
+    <meta property="og:title" content="投資難不島 富邦行動新三寶︱富邦證券" />
+    <meta
+      property="og:description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+
+    ##include('./components/meta.html')
+
+    <!-- build:css ./styles/index.css -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- endbuild -->
+
+    <!-- build:js ./scripts/index.js -->
+    <script src="./scripts/index.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body ontouchstart="">
+    ##include('./components/ga-body.html') ##include('./components/header.html',
+    {"tab": "1"}) ##include('./components/fixed-balloon.html')
+    ##include('./components/loading.html')
+
+    <div class="main">
+      <div class="kv">
+        <div class="wrap">
+          <div class="animate">
+            <a
+              class="animate_link animate_link_smart"
+              href="./smart-app.html"
+              megais_ga="index_smart"
+            ></a>
+            <a
+              class="animate_link animate_link_e-click"
+              href="./etrade-app.html"
+              megais_ga="index_etrade"
+            ></a>
+            <a
+              class="animate_link animate_link_fund"
+              href="./fund.html"
+              megais_ga="index_fund"
+            ></a>
+            <a
+              class="animate_link animate_link_description"
+              href="./guide.html"
+              megais_ga="index_guide"
+            ></a>
+            <a
+              class="animate_link animate_link_video"
+              href="./video.html"
+              megais_ga="index_video"
+            ></a>
+            <iframe
+              id="animate_pc"
+              src="./ani_p3/pc/index.html"
+              frameborder="0"
+            ></iframe>
+            <iframe
+              id="animate_m"
+              src="./ani_p3/m/index.html"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    ##include('./components/footer.html')
+  </body>
+</html>

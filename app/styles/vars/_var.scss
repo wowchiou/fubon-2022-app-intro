@@ -1,0 +1,20 @@
+$c-primary: #079ab5;
+$c-secondary: #017268;
+$c-brown: #60240d;
+$c-yellow: #fffab1;
+$c-darkYellow: #f9db8d;
+$c-deepGreen: #016e82;
+$c-lightGreen: #85dcde;
+
+// 1em = 16px
+$break-point: (
+  sp: '(max-width: 21.875em)',
+  phone: '(max-width: 40em)',
+  tablet: '(max-width: 60em)',
+  md3: '(max-width: 68.75em)',
+  md2: '(max-width: 78.75em)',
+  md1: '(max-width: 87.5em)',
+  wide: '(min-width: 120.0625em)',
+);
+
+$maxWidth: 1366px;

@@ -1,0 +1,125 @@
+@import './vars/index.scss';
+
+.main {
+  padding-top: 29.3rem;
+  background-image: url(../images/fund/top-bg-1.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 180.6rem;
+  @media (max-width: 640px) {
+    padding-top: calc(26.25% + 7rem);
+    background-image: url(../images/fund/top-bg-2.png);
+    background-size: 100%;
+    background-position: top 7rem center;
+  }
+
+  section + section {
+    margin-top: 13rem;
+  }
+}
+
+.title h2 {
+  &::before {
+    width: 9.4rem;
+    height: 7.8rem;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-image: url(../images/fund/tree-1.png);
+    background-size: cover;
+    z-index: 0;
+  }
+  &::after {
+    width: 6.1rem;
+    height: 5.8rem;
+    top: 0;
+    left: 0;
+    background-image: url(../images/fund/tree-3.png);
+    background-size: cover;
+    z-index: 0;
+    transform: translate(-55%, -10%);
+  }
+  p {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 8.2rem;
+      height: 4.8rem;
+      bottom: 0;
+      left: 0;
+      background-image: url(../images/fund/tree-2.png);
+      background-size: cover;
+      z-index: 2;
+      transform: translate(-50%, 35%);
+    }
+  }
+}
+
+.swiper-slide-1 .pic {
+  background-image: url(../images/fund/slider-pc-1.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/fund/slider-m-1.png);
+  }
+}
+
+.swiper-slide-2 .pic {
+  background-image: url(../images/fund/slider-pc-2.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/fund/slider-m-2.png);
+  }
+}
+
+.swiper-slide-3 .pic {
+  background-image: url(../images/fund/slider-pc-3.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/fund/slider-m-3.png);
+  }
+}
+
+.app {
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+  .app_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: $c-secondary;
+    margin-bottom: 1rem;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
+    span {
+      flex: 1;
+      line-height: 1.2;
+      white-space: nowrap;
+      @media all and (max-width: 1060px) {
+        white-space: normal;
+      }
+    }
+  }
+  .app_title_icon {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-image: url(../images/star-1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+    @media (max-width: 768px) {
+      transform: translateY(-5%);
+    }
+  }
+  .app_img {
+    width: 36.4rem;
+    margin-left: 4rem;
+    @media (max-width: 768px) {
+      width: auto;
+    }
+  }
+  .group + .group {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,78 @@
+@import './vars/index.scss';
+
+.main {
+  padding-top: 29.3rem;
+  background-image: url(../images/smart/top-bg-1.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 177rem;
+  @media (max-width: 640px) {
+    padding-top: calc(26.25% + 7rem);
+    background-image: url(../images/smart/top-bg-2.png);
+    background-size: 100%;
+    background-position: top 7rem center;
+  }
+
+  section + section {
+    margin-top: 13rem;
+  }
+}
+
+.title h2 {
+  &::before {
+    width: 7.7rem;
+    height: 6.9rem;
+    top: 50%;
+    right: 0;
+    transform: translate(70%, -50%);
+    background-image: url(../images/smart/tree-1.png);
+    background-size: cover;
+    z-index: 0;
+  }
+  &::after {
+    width: 6.1rem;
+    height: 5.8rem;
+    top: 0;
+    left: 0;
+    background-image: url(../images/smart/tree-3.png);
+    background-size: cover;
+    z-index: 0;
+    transform: translate(-60%, -10%);
+  }
+  p {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 7.4rem;
+      height: 4.9rem;
+      bottom: 0;
+      left: 0;
+      background-image: url(../images/smart/tree-2.png);
+      background-size: cover;
+      z-index: 2;
+      transform: translate(-50%, 10%);
+    }
+  }
+}
+
+.swiper-slide-1 .pic {
+  background-image: url(../images/smart/slider-pc-1.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/smart/slider-m-1.png);
+  }
+}
+
+.swiper-slide-2 .pic {
+  background-image: url(../images/smart/slider-pc-2.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/smart/slider-m-2.png);
+  }
+}
+
+.swiper-slide-3 .pic {
+  background-image: url(../images/smart/slider-pc-3.png);
+  @media (max-width: 768px) {
+    background-image: url(../images/smart/slider-m-3.png);
+  }
+}

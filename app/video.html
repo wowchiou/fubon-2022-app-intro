@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="APP使用教學影音教學︱富邦證券 投資難不島" />
+    <meta
+      name="description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+    <meta
+      name="keyword"
+      content="富邦,證券,投資難不島,股票,證券,投資,台股,ETF,美股,基金,影音,教學,下單,APP教學,理財,開戶,學習投資"
+    />
+
+    <title>APP使用教學影音教學︱富邦證券 投資難不島</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+
+    <!-- fb 分享設定 -->
+    <meta
+      property="og:title"
+      content="APP使用教學影音教學︱富邦證券 投資難不島"
+    />
+    <meta
+      property="og:description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+    <meta
+      property="og:url"
+      content="https://demo.ad.megais.com/fubon/202202/video.html"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./lib/css/animate.css" />
+    <script src="./lib/js/wow.min.js"></script>
+
+    ##include('./components/meta.html')
+
+    <!-- build:css ./styles/video.css -->
+    <link rel="stylesheet" href="./styles/video.css" />
+    <!-- endbuild -->
+
+    <!-- build:js ./scripts/video.js -->
+    <script src="./scripts/video.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body class="teaching" ontouchstart="">
+    ##include('./components/ga-body.html') ##include('./components/header.html',
+    {"tab": "1"}) ##include('./components/fixed-balloon.html')
+    ##include('./components/loading.html')
+
+    <div class="main">
+      <section class="video">
+        <div class="wrap">
+          <div class="title">
+            <h2>
+              <p>
+                <span>無人島探險</span>
+                <span>影音教學</span>
+              </p>
+            </h2>
+          </div>
+
+          <template id="video-template">
+            <div
+              class="swiper-slide"
+              data-video="{{id}}"
+              megais_ga="video_{{id}}"
+            >
+              <div
+                class="video_pic"
+                style="
+                  background-image: url(https://img.youtube.com/vi/{{id}}/maxresdefault.jpg);
+                "
+              ></div>
+              <div class="video_title">
+                <span></span>
+                <p>{{title}}</p>
+              </div>
+            </div>
+          </template>
+
+          <div class="video_wrap">
+            <div class="slider swiper">
+              <div id="video-wrapper" class="swiper-wrapper">
+                <!-- js render -->
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    ##include('./components/footer.html')
+
+    <div class="popup">
+      <div class="popup_wrap">
+        <div class="popup_content">
+          <div class="popup_close" id="video-close"></div>
+          <div class="yt">
+            <iframe
+              id="yt-iframe"
+              width="560"
+              height="315"
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

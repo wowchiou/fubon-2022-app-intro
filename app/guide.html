@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="APP使用教學圖文懶人包︱富邦證券 投資難不島" />
+    <meta
+      name="description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+    <meta
+      name="keyword"
+      content="富邦,證券,投資難不島,股票,證券,投資,台股,ETF,美股,基金,影音,教學,下單,APP教學,理財,開戶,學習投資"
+    />
+
+    <title>APP使用教學圖文懶人包︱富邦證券 投資難不島</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+
+    <!-- fb 分享設定 -->
+    <meta
+      property="og:title"
+      content="APP使用教學圖文懶人包︱富邦證券 投資難不島"
+    />
+    <meta
+      property="og:description"
+      content="新手買股要怎麼開始? 下單APP如何使用? 證券有哪些商品?富邦證券投資難不島，讓投資有趣又簡單!"
+    />
+    <meta
+      property="og:url"
+      content="https://demo.ad.megais.com/fubon/202202/guide.html"
+    />
+
+    <link rel="stylesheet" href="./lib/css/animate.css" />
+    <script src="./lib/js/wow.min.js"></script>
+
+    ##include('./components/meta.html')
+
+    <!-- build:css ./styles/guide.css -->
+    <link rel="stylesheet" href="./styles/guide.css" />
+    <!-- endbuild -->
+
+    <script src="./scripts/data-eclick.js"></script>
+    <script src="./scripts/data-smart.js"></script>
+
+    <!-- build:js ./scripts/guide.js -->
+    <script src="./scripts/guide.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body class="teaching" ontouchstart="">
+    ##include('./components/ga-body.html') ##include('./components/header.html',
+    {"tab": "1"}) ##include('./components/fixed-balloon.html')
+    ##include('./components/loading.html')
+
+    <div class="main">
+      ##include('./components/fixed-top.html')
+
+      <section class="guide">
+        <div class="wrap">
+          <div class="title">
+            <h2>
+              <p>
+                <span>生存說明</span>
+                <span>懶人包圖文</span>
+              </p>
+            </h2>
+          </div>
+
+          <div class="pages">
+            <div
+              class="page page_e-click"
+              data-page="1"
+              megais_ga="guide_page_1"
+            ></div>
+            <!-- <div
+              class="page page_e"
+              data-page="2"
+              megais_ga="guide_page_2"
+            ></div> -->
+            <div
+              class="page page_smart"
+              data-page="3"
+              megais_ga="guide_page_3"
+            ></div>
+          </div>
+
+          <div class="tabs">
+            <div class="tab_wrap" id="tab_wrapper">
+              <!-- js render -->
+            </div>
+          </div>
+
+          <template id="search_template">
+            <div class="search">
+              <form class="bar" id="search_bar">
+                <input type="text" id="search_text" />
+                <div class="button search_btn" megais_ga="guide_search"></div>
+                <div
+                  class="button close_btn"
+                  megais_ga="guide_search_close"
+                ></div>
+              </form>
+            </div>
+          </template>
+
+          <template id="tabs_template">
+            <div
+              class="tab {{active}}"
+              data-index="{{text}}"
+              megais_ga="guide_{{page}}_{{text}}"
+            >
+              <div
+                class="icon"
+                style="background-image: url(./images/guide/{{icon}})"
+              ></div>
+              <p>{{text}}</p>
+            </div>
+          </template>
+
+          <div class="sign">
+            <div class="sign_group">
+              <a
+                href="javascript:;"
+                class="sign_btn sign_android active"
+                data-type="android"
+                megais_ga="guide_android"
+              ></a>
+              <a
+                href="javascript:;"
+                class="sign_btn sign_ios"
+                data-type="ios"
+                megais_ga="guide_ios"
+              ></a>
+            </div>
+          </div>
+
+          <template id="description_template">
+            <li>
+              <div class="caption {{default}}">
+                <span class="icon">
+                  <span class="pic"></span>
+                  <span class="text">{{index}}</span>
+                </span>
+                <p>{{title}}</p>
+              </div>
+              {{guide}}
+              <div class="line">
+                <img src="./images/guide/line-1.png" alt="" />
+              </div>
+            </li>
+          </template>
+
+          <template id="guide_template">
+            <div class="group">
+              <div class="text text-pc">{{description}}</div>
+              <div class="pic">
+                <img
+                  src="./images/guide/{{page}}/{{mobileType}}/{{mobile}}-{{descriptionId}}-{{guideIndex}}.jpg"
+                  alt="{{description}}"
+                />
+              </div>
+              <div class="text text-m">{{description}}</div>
+            </div>
+          </template>
+
+          <div class="content">
+            <ul class="descriptions" id="descriptions">
+              <!-- js render -->
+            </ul>
+
+            <div class="no-result" id="no_result">
+              <img src="./images/guide/no-result.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    ##include('./components/footer.html')
+  </body>
+</html>
